@@ -1,0 +1,112 @@
+GIT Commands:
+=============
+
+To see version of git installed  : git version
+To get list of all possible command options : git
+To get help with any command : git help <command>	
+						   Ex: git help pull --> 
+						   
+						   For Windows --> This command will invoke a new tab in your default browser with all avaliable help options.
+						   For Mac     --> This command will provide with all avaliable help options in terminal itself.
+
+Configuration Commands:1)What's the current directory (present working directory)?
+							pwd
+							
+					   2)Git Config (Global/User-level) Syntax
+							git config --global setting value
+							Configure User and Email
+							General Syntax:
+
+							git config --global user.name "Your Name"
+							git config --global user.email "you@someplace.com"
+							
+							Example using course author's information:
+
+							git config --global user.name "Jason Taylor"
+							git config --global user.email "jason@jasongtaylor.com"
+							
+						3)Listing All Global Configuration Settings
+							git config --global --list
+						
+						4)Seeing Git's User-based Config file
+								cat ~/.gitconfig
+								
+								
+Once git is configured in your system,you can start working on your project.
+Go the the desired location in your system where you will place all your code.
+For me,I am creating all my projects under "~/Documents/My_GIT_Repository"
+
+Now suppose i am creating a new project named "git-demo"
+
+> My present working directory is : /c/Users/Bhagya/Documents/My_GIT_Repository
+
+I will execute below command to create project repository in my local system.
+
+> git init git-demo <--A new folder will be created in your current location.
+
+Now to directory created.
+
+>cd git-demo
+
+
+>start notepad++ README.md	<-- This command will open file in notepad++
+
+							contents of the file:  
+							#DEMO GIT REPOSITORY
+
+							This is the first file in this repo.
+
+>ls
+
+You will able to see README.md in your folder.
+
+>git status		<-- At this stage it will show "untracked file" present in your directory.
+
+>git add README.md <-- This command will add this file to your current working repository.
+
+>git status 	<-- At this stage it will show "Changes to be committed" in your directory.
+
+>git commmit -m "Initial commit"  <-- git commit command will commit changes in repository while -m is used to give message while committing file.
+
+>git status <-- Now you will get message ,nothing to cmommit in the repository.
+
+>start notepad++ README.md  <-- Add some random test in this file and save.
+
+>git status <--	"Changes not staged for commit:" message will appear.
+
+>git add README.md <-- This command will add this file to your current working repository.
+
+>git status 	<-- At this stage it will show "Changes to be committed" in your directory.
+
+>git commmit -m "Second commit"  <-- git commit command will commit changes in repository while -m is used to give message while committing file.
+
+>git status	<-- Now you will get message ,nothing to cmommit in the repository.
+
+*Shortcut to commit changes if file is already in place.*
+
+>start notepad++ README.md  <-- Add some random test in this file and save.
+
+>git commit -am "Third commit" <-- -a is for add, -m is for message.
+
+>git status <-- Now you will get message ,nothing to cmommit in the repository.
+
+*Steps to rollback changes made in the file*
+
+>start notepad++ README.md  <-- add some random text
+
+>git add README.md
+
+Now if you want to rollback the changes made in your file.
+
+>git reset HEAD README.md
+
+>git checkout -- README.md
+
+File will now be reversed to its initial state
+
+
+
+
+
+
+
